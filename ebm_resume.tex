@@ -1,13 +1,26 @@
+\documentclass{res}
 
-
-\documentclass{res} 
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 \usepackage{verbatim}
+% \usepackage{biblatex-chicago}
+
+\usepackage{bibentry}
+ 
 \setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
 
+\usepackage{natbib}
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[colorlinks=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
 
-
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
 
 \begin{document} 
 \newsectionwidth{15 pt}
@@ -21,45 +34,86 @@
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
 \centerline{323 Evans Hall, Berkeley, CA 94720 }
-\centerline{ (908)-472-6870 $\mid$ ebenmichael@berkeley.edu $\mid$ github.com/ebenmichael $\mid$ ebenmichael.github.io}
+\centerline{ (908)-472-6870 $\mid$ ebenmichael@berkeley.edu $\mid$ \href{http://github.com/ebenmichael}{github.com/ebenmichael} $\mid$ \href{ebenmichael.github.io}{ebenmichael.github.io}}
 
                                   
 \begin{resume}
 
 \section{EDUCATION}
-    \textbf{University of California, Berkeley}, Berkeley, CA \hfill Expected May 2021\\
-    PhD in Statistics\\
-    \textbf{Research Interests}: Causal Inference, Machine Learning
+    \textbf{University of California, Berkeley}, Berkeley, CA \hfill Expected May 2020\\
+    PhD in Statistics, Advisor: Avi Feller, Research Topic: Causal Inference
+    % \textbf{Research Interests}: Causal Inference, Machine Learning
 
     \textbf{Columbia University}, Columbia College, New York, NY \hfill May 2016\\
     Bachelor of Arts, \textit{Summa Cum Laude}, Computer Science and Statistics\\
     \textbf{Honors}: Phi Beta Kappa, Computer Science Department Award (top Computer Science Major), Dean's List (Fall 2012-Spring 2016)
 
+
+
+ \makeatletter 
+ \renewcommand\BR@b@bibitem[2][]{\BR@bibitem[#1]{#2}\BR@c@bibitem{#2}}           
+ \makeatother
+\bibliographystyle{apalike}
+\nobibliography{my_papers}
+\section{RESEARCH}
+\textbf{Research Interests}:
+\begin{itemize}
+\item[] Causal Inference, Machine Learning, Econometrics% , Optimization
+\end{itemize}%
+\vspace{-4mm}
+\textbf{Working Papers:}
+\begin{itemize}
+\item[] \bibentry{benmichael2018_ascm}
+\end{itemize}
+\vspace{-4mm}
+\textbf{Contributed Talks:}
+\begin{itemize}
+\item[] UAI 2018 Causal Workshop, 2018 European Winter Meeting of the Econometric Society
+% \item[] \bibentry{benmichael2018_uai}
+% \item[] \bibentry{benmichael2018_eswm}
+\end{itemize}
+\vspace{-4mm}
+\textbf{Open Source Software:}
+\begin{itemize}
+\item[] \href{https://github.com/ebenmichael/augsynth}{\texttt{augsynth}}: \texttt{R} implementation of the augmented synthetic control method
+\end{itemize}
 \section{EXPERIENCE}
 
-\textbf{U.C. Berkeley Department of Statistics}, Berkeley, CA  \hfill{Fall 2017}\\
+\textbf{U.C. Berkeley Department of Statistics}, Berkeley, CA  \hfill{Fall 2017, Fall 2018}\\
 \textit{Graduate Student Instructor}
 \begin{itemize}
-\item Lectured recitations and created assignments and assessments for Stat 159/259: Reproducible and Collaborative Data Science; the course focused on reproducible analysis using the Python data science stack and tools such as version control and Makefiles
-\end{itemize}
-
+  % \item Lectured recitations and created assignments and assessments for Stat 159/259: Reproducible and Collaborative Data Science; the course focused on reproducible analysis using the Python data science stack and tools such as version control and Makefiles
+% \item Lectured recitations and created assignments and assessments for
+% \vspace{-1mm}  
+%   \begin{itemize}
+%   \item[] Stat 159/259: Reproducible and Collaborative Data Science     
+%   \item[] Stat 232: Experimental Design
+%   \end{itemize}
+% \end{itemize}
+% \item Lectured recitations and created assignments and assessments for Stat 159/259: Reproducible and Collaborative Data Science and Stat 232: Experimental Design
+\item (Fall 2017) Stat 159/259: Reproducible and Collaborative Data Science
+\item (Fall 2018) Stat 232: Experimental Design  
+\end{itemize}  
+\vspace{-2mm}  
 \textbf{Walmart Labs}, Sunnyvale, CA \hfill{Summer 2017}\\
 \textit{Machine Learning Scientist Intern}
 \begin{itemize}
 \item Designed models of consumer purchase behavior to learn latent representations of products
-\item Implemented efficient learning algorithms on tens of millions of consumer purchases using Spark
-\item Assessed resulting representations' ability to reconstruct a human-generated catalog
-\item Communicated results to various teams across the organization
+\item Implemented efficient learning algorithms on tens of millions of consumer purchases with Spark
+% \item Assessed resulting representations' ability to reconstruct a human-generated catalog
+\item Validated the representations' predictive power by reconstructing a human-generated catalog
+  % \item Communicated results to various teams across the organization
+\item Presented results to various teams across the organization for use in their modelling pipelines
 \end{itemize}
 
 
 \textbf{Knewton}, New York, NY \hfill{Summer 2016}\\
 \textit{Data Science Intern}
 \begin{itemize}
-\item Generalized Bayesian models to incorporate hierarchical structure 
+\item Generalized Bayesian models of student learning to incorporate hierarchical structure 
 \item Scaled learning algorithms with a 10x speedup  using Spark
 \item Analyzed performance, strengths, and weaknesses of models on student data
-\item Presented and documented models, code, and results
+% \item Presented and documented models, code, and results
 \end{itemize}
 
 \begin{comment}
@@ -79,7 +133,7 @@
 \begin{itemize}
 \item Built a natural language processing text analysis application in Python for use by economists 
 \item Extracted text features from corpora using Python, NLTK, and gensim
-\item Performed econometric and statistical analysis on text data with associated meta data
+\item Performed econometric and statistical analysis on text data with associated metadata
 \end{itemize}
 
 
@@ -103,22 +157,23 @@
 \end{comment}
 
 
-\section{EXTRACURRICULAR ACTIVITIES}
-	\textbf{Columbia Data Science Society}, Vice President of Education \hfill Fall 2015 - Spring 2016
-	\begin{itemize}
-	\item Designed and taught workshops on data science tools such as Python and R
-	\item Ran a committee of six people which organized educational events in data science
-	\end{itemize}
-\begin{comment}	
-	\textbf{Personal Projects} (On Github)
-	\begin{itemize}
-	\item Qlearning: Implementation of deep reinforcement learning algorithms
-	\item brownian: Simulation of Brownian motion and general stochastic differential equations
-	\item memm\_tagging: Implementation of a Maximum Entropy Markov Model 
-	\end{itemize}
-\end{comment}
+% \section{EXTRACURRICULAR ACTIVITIES}
+% 	\textbf{Columbia Data Science Society}, Vice President of Education \hfill Fall 2015 - Spring 2016
+% 	\begin{itemize}
+% 	\item Designed and taught workshops on data science tools such as Python and R
+% 	\item Ran a committee of six people which organized educational events in data science
+% 	\end{itemize}
+% \begin{comment}	
+% 	\textbf{Personal Projects} (On Github)
+% 	\begin{itemize}
+% 	\item Qlearning: Implementation of deep reinforcement learning algorithms
+% 	\item brownian: Simulation of Brownian motion and general stochastic differential equations
+% 	\item memm\_tagging: Implementation of a Maximum Entropy Markov Model 
+% 	\end{itemize}
+% \end{comment}
+
 \section{SKILLS}
-	Machine Learning, Statistics, Python, R, SQL, Scala, Spark, MATLAB, Java
+Observational Studies, Experimental Design, Quasi-Experimental Methods, Machine Learning, R, Python % SQL, Scala, Spark, MATLAB, Java
 
 
 \end{resume}
