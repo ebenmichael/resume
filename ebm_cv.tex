@@ -1,0 +1,211 @@
+\documentclass{res}
+
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{verbatim}
+\usepackage{hanging}
+% \usepackage{biblatex-chicago}
+
+\usepackage{bibentry}
+ 
+\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
+\usepackage{array}
+\usepackage{natbib}
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[colorlinks=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+% for bolding my name
+\newcommand{\myname}[1]{\textbf{Ben-Michael, E.}}
+\newcommand{\rev}[1]{\textbf{E. Ben-Michael}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\begin{document} 
+\newsectionwidth{15 pt}
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Eli Ben-Michael}
+ 
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}
+
+
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+% \centerline{323 Evans Hall, Berkeley, CA 94720 }
+\centerline{ (908)-472-6870 $\mid$ ebenmichael@berkeley.edu $\mid$ 357 Evans Hall, Berkeley CA  $\mid$ \href{ebenmichael.github.io}{ebenmichael.github.io}}
+
+                                  
+\begin{resume}
+
+\section{EDUCATION}
+    \textbf{University of California, Berkeley}, Berkeley, CA \hfill Expected 2020\\
+    PhD in Statistics, Advisors: Avi Feller and Peng Ding
+    % \textbf{Research Interests}: Causal Inference, Machine Learning
+
+    \textbf{Columbia University}, Columbia College, New York, NY \hfill May 2016\\
+    Bachelor of Arts, \textit{Summa Cum Laude}, Computer Science and Statistics\\
+    % \textbf{Honors}: Phi Beta Kappa, Computer Science Department Award% (top Computer Science Major)
+    % , Dean's List (Fall 2012-Spring 2016)
+ \makeatletter 
+ \renewcommand\BR@b@bibitem[2][]{\BR@bibitem[#1]{#2}\BR@c@bibitem{#2}}           
+ \makeatother
+\bibliographystyle{chicago}
+\nobibliography{my_papers}
+% \textbf{Research Interests}:
+% \section{rese}
+% \begin{itemize}
+% \item[] Causal Inference, Machine Learning, Program Evaluation%Econometrics% , Optimization
+% \end{itemize}%
+\section{PUBLISHED ARTICLES}
+\medskip
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{Elser2019}
+% \hspace{0.2em} \bibentry{Elser2019}
+
+\section{PREPRINTS AND WORKING PAPERS}
+\medskip
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2019_multisynth}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2018_ascm}
+% \section{UNDER PREPARATION}
+\section{OPEN SOURCE STATISTICAL SOFTWARE}
+\hspace{0.2em}\hangpara{3em}{1} \href{https://github.com/ebenmichael/augsynth}{\texttt{augsynth}}: \texttt{R} implementation of the augmented synthetic control method
+\section{PRESENTATIONS}
+\medskip
+\hspace{0.2em}\hangpara{2em}{1} Synthetic control and weighted event study models with staggered adoption \hfill November 2019\\
+\emph{Berkeley-Stanford Econometrics Jamboree}
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Augmented Panel Data Models with Staggered Adoption \hfill May 2019\\
+\emph{Atlantic Causal Inference Conference}\\
+\hspace{2em}{\footnotesize Thomas R. Ten Have Poster Award runner up}
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Multi-level balancing weights for multi-site observational studies \hfill March 2019\\
+\emph{Society for Research on Educational Effectiveness}
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} The augmented synthetic control method \hfill December 2018\\ \emph{2018 European Winter Meeting of the Econometric Society}
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Matrix constraints and multi-task learning for covariate balance \hfill August 2018\\ \emph{7th Causal Inference Workshop at UAI}
+
+\section{AWARDS AND HONORS}
+\hspace{0.2em}\hangpara{2em}{1} Department fellowship, Department of Statistics, U.C. Berkeley \hfill 2018\\
+\hspace{3em}{\footnotesize Two years of funding through RTG grant: Advancing Machine Learning - Causality and Interpretability}
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Phi Beta Kappa, Columbia University \hfill 2016
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Computer Science Department Award, Columbia University \hfill 2016\\
+\hspace{3em}{\footnotesize Given to the top two graduating seniors each year}
+
+
+\section{TEACHING}
+\textbf{U.C. Berkeley Department of Statistics}
+\textit{Graduate Student Instructor}\\
+% \begin{itemize}
+%     \item[] Stat 232: Experimental Design with Sam Pimentel \hfill Fall 2017
+%     \item[] Stat 159/259: Reproducible and Collaborative Data Science with Fernando Perez \hfill Fall 2018
+% \end{itemize}
+\hspace{0.2em}\hangpara{3em}{1} Stat 232: Experimental Design with Sam Pimentel \hfill Fall 2017\\
+\hspace{0.2em}\hangpara{3em}{1} Stat 159/259: Reproducible and Collaborative Data Science with Fernando Perez \hfill Fall 2018
+
+
+\section{WORK EXPERIENCE}
+\textbf{Uber}, New York, NY \hfill{Summer 2019}\\
+\textit{Data Science Intern}
+\begin{itemize}
+\item Built spatiotemporal models for feature extraction to enhance predictions in dispatch decisions
+\item Utilized factor analysis and auto-encoding neural networks to learn embeddings of ride behavior
+\item Created procedures to quickly isolate predictive contribution of features in black box  models
+% \item Evaluated model improvements and disseminated results across the organization  
+\end{itemize}
+\vspace{-2mm}  
+\textbf{Walmart Labs}, Sunnyvale, CA \hfill{Summer 2017}\\
+\textit{Machine Learning Scientist Intern}
+\begin{itemize}
+\item Designed models of consumer purchase behavior to learn latent representations of products
+\item Implemented efficient learning algorithms on tens of millions of consumer purchases with Spark
+% \item Assessed resulting representations' ability to reconstruct a human-generated catalog
+\item Validated the representations' predictive power by reconstructing a human-generated catalog
+  % \item Communicated results to various teams across the organization
+% \item Presented results to various teams across the organization for use in their modelling pipelines 
+\end{itemize}
+
+
+\textbf{Knewton}, New York, NY \hfill{Summer 2016}\\
+\textit{Data Science Intern}
+\begin{itemize}
+\item Generalized Bayesian models of student learning to incorporate hierarchical structure 
+\item Scaled learning algorithms with a 10x speedup using Spark
+\item Analyzed performance, strengths, and weaknesses of models on student data
+% \item Presented and documented models, code, and results
+\end{itemize}
+
+\begin{comment}
+%BIG DATA
+\textbf{Big Data Summer Institute}, University of Michigan, Ann Arbor, MI \hfill Summer 2015
+\\ \textit{Intern}
+\begin{itemize}
+\item Implemented a search and counting algorithm for sub-sequences of the human genome
+\item Attended lectures on machine learning, algorithms, data science, and statistics 
+\item Presented work to faculty and undergraduates to promote the program to other institutions
+\end{itemize}
+\end{comment}
+
+% ECON
+% \begin{comment}
+\textbf{Columbia University Department of Economics}, New York, NY \hfill Fall 2014 - Spring 2016\\
+\textit{Research Assistant}
+\begin{itemize}
+\item Built a natural language processing text analysis application in Python for use by economists 
+% \item Extracted text features from corpora using Python, NLTK, and gensim
+\item Performed econometric and statistical analysis on text data with associated metadata
+\end{itemize}
+% \end{comment}
+
+\begin{comment}
+%DIMACS
+	\textbf{Center for Discrete Mathematics and Theoretical Computer Science}, Piscataway, NJ\\
+\textit{Research Intern} \hfill Summer 2014 
+\begin{itemize}
+\item Implemented a spectral machine learning algorithm in Python to learn a Hidden Markov Model
+\item Improved algorithm runtime 100x through utilization of Python's NumPy and SciPy libraries
+\item Presented results to colleagues and faculty to gain feedback
+\end{itemize}
+
+%TA
+\textbf{Columbia University Departments of Mathematics and Statistics}, New York, NY
+  \\ \textit{Undergraduate Teaching Assistant}\hfill Spring 2014 - Spring 2016
+\begin{itemize}
+\item Held regular office hours for calculus, linear algebra, and statistics students
+\item Evaluated assignments and provided feedback to students
+\end{itemize}
+\end{comment}
+
+
+% \section{EXTRACURRICULAR ACTIVITIES}
+% 	\textbf{Columbia Data Science Society}, Vice President of Education \hfill Fall 2015 - Spring 2016
+% 	\begin{itemize}
+% 	\item Designed and taught workshops on data science tools such as Python and R
+% 	\item Ran a committee of six people which organized educational events in data science
+% 	\end{itemize}
+% \begin{comment}	
+% 	\textbf{Personal Projects} (On Github)
+% 	\begin{itemize}
+% 	\item Qlearning: Implementation of deep reinforcement learning algorithms
+% 	\item brownian: Simulation of Brownian motion and general stochastic differential equations
+% 	\item memm\_tagging: Implementation of a Maximum Entropy Markov Model 
+% 	\end{itemize}
+% \end{comment}
+
+\section{INSTITUTIONAL SERVICE}
+Co-president of the Statistics Graduate Student Association\hfill Fall 2018 - Spring 2019
+% \section{SKILLS}
+% R, Python, Machine Learning, Experimental Design, Program Evaluation  % SQL, Scala, Spark, MATLAB, Java
+
+
+\end{resume}
+
+\end{document}

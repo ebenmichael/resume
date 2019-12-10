@@ -20,12 +20,42 @@
 abstract = {The synthetic control method (SCM) is a popular approach for estimating the impact of a treatment on a single unit in panel data settings. The "synthetic control" is a weighted average of control units that balances the treated unit's pre-treatment outcomes as closely as possible. The curse of dimensionality, however, means that SCM does not generally achieve exact balance , which can bias the SCM estimate. We propose an extension, Augmented SCM, which uses an outcome model to estimate the bias due to covariate imbalance and then de-biases the original SCM estimate, analogous to bias correction for inexact matching. We motivate this approach by showing that SCM is a (regularized) inverse propensity score weighting estima-tor, with pre-treatment outcomes as covariates and a ridge penalty on the propensity score coefficients. We give theoretical guarantees for specific cases and propose a new inference procedure. We demonstrate gains from Augmented SCM with extensive simulation studies and apply this framework to canonical SCM examples. We implement the proposed method in the new augsynth R package. *},
 archivePrefix = {arXiv},
 arxivId = {1811.04170v1},
-author = {Ben-Michael, Eli and Feller, Avi and Rothstein, Jesse},
+author = {\myname{eli} and Feller, Avi and Rothstein, Jesse},
 eprint = {1811.04170v1},
 file = {:C$\backslash$:/Users/ebenm/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Ben-Michael, Feller, Rothstein - 2018 - The Augmented Synthetic Control Method.pdf:pdf},
 isbn = {1811.04170v1},
 mendeley-groups = {My Papers},
 title = {{The augmented synthetic control method}},
 url = {https://arxiv.org/pdf/1811.04170.pdf},
-year = {2018}
+year = {2019}
+}
+
+
+
+@unpublished{benmichael2019_multisynth,
+abstract = {Staggered adoption of policies by different units at different times creates promising opportunities for observational causal inference. The synthetic control method (SCM) is a recent addition to the evaluation toolkit but is designed to study a single treated unit and does not easily accommodate staggered adoption. In this paper, we generalize SCM to the staggered adoption setting. Current practice involves fitting SCM separately for each treated unit and then averaging. We show that the average of separate SCM fits does not necessarily achieve good balance for the average of the treated units, leading to possible bias in the estimated effect. We propose "partially pooled" SCM weights that instead minimize both average and state-specific imbalance, and show that the resulting estimator controls bias under a linear factor model. We also combine our partially pooled SCM weights with traditional fixed effects methods to obtain an augmented estimator that improves over both SCM weighting and fixed effects estimation alone. We assess the performance of the proposed method via extensive simulations and apply our results to the question of whether teacher collective bargaining leads to higher school spending, finding minimal impacts. We implement the proposed method in the augsynth R package. *},
+archivePrefix = {arXiv},
+arxivId = {1912.03290v1},
+author = {\myname{eli} and Feller, Avi and Rothstein, Jesse},
+eprint = {1912.03290v1},
+file = {:C$\backslash$:/Users/ebenm/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Ben-Michael, Feller, Rothstein - 2019 - Synthetic Controls and Weighted Event Studies with Staggered Adoption.pdf:pdf},
+mendeley-groups = {My Papers},
+title = {Synthetic Controls and Weighted Event Studies with Staggered Adoption},
+year = {2019}
+}
+
+
+@article{Elser2019,
+abstract = {background Relatively few studies have examined the effects of layoffs on remaining workers, although the effects of layoffs and downsizing events may extend beyond those employees who lose their jobs. Methods We examined the effects of layoffs on mental healthcare utilisation and injury risk among workers at 30 US plants between 2003 and 2013. We defined layoffs as reductions in the hourly workforce of 20{\%} or more at each plant. Using a difference-indifferences approach, we compared the change in outcomes during layoffs versus the same 3-month period 1 year previously, accounting for secular trends with control plants. results Our study population included 15 502 workers and 7 layoff events between 2003 and 2013. Layoffs were associated with only minor decreases in injuries (−0.006, 95{\%} CI −0.013 to 0.001). The probability of outpatient visits related to mental health increased by 1{\%} during layoffs (0.010, 95{\%} CI 0.003 to 0.017), and the probability of mental health-related prescriptions increased by 1.4{\%} (0.014, 95{\%} CI −0.0006 to 0.027). Among women, the increase in outpatient visits was more pronounced (0.017, 95{\%} CI 0.003 to 0.031). Increased prescription utilisation appeared attributable primarily to opioid use (0.016, 95{\%} CI 0.005 to 0.027). Conclusion Our results indicate an association between layoffs and remaining workers' mental health and safety, although changes mental healthcare utilisation may reflect both changes in underlying mental health and changes in care-seeking. Future research on concordance of service utilisation and underlying health may yield valuable insight into the experiences employed workers in the wake of layoffs.},
+author = {Elser, Holly and \rev{eli} and Rehkopf, David and Modrek, Sepideh and Eisen, Ellen A and Cullen, Mark R},
+doi = {10.1136/jech-2018-211774},
+file = {:C$\backslash$:/Users/ebenm/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Elser et al. - 2019 - Layoffs and the mental health and safety of remaining workers a difference-in-differences analysis of the US alumi.pdf:pdf},
+issn = {0143-005X},
+journal = {Journal of Epidemiology and Community Health},
+mendeley-groups = {My Papers},
+pages = {1094-1100},
+title = {{Layoffs and the mental health and safety of remaining workers: a difference-in-differences analysis of the US aluminium industry}},
+url = {http://dx.doi.org/10.1136/jech-2018-211774},
+volume = {73},
+year = {2019}
 }
