@@ -3,18 +3,22 @@
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 \usepackage{verbatim}
+\usepackage{hanging}
 % \usepackage{biblatex-chicago}
 
 \usepackage{bibentry}
  
 \setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
-
+\usepackage{array}
 \usepackage{natbib}
 \usepackage{bibentry}
 \makeatletter\let\saved@bibitem\@bibitem\makeatother
 \usepackage[colorlinks=true]{hyperref}
 \makeatletter\let\@bibitem\saved@bibitem\makeatother
 
+% for bolding my name
+\newcommand{\myname}[1]{\textbf{Ben-Michael, E.}}
+\newcommand{\rev}[1]{\textbf{E. Ben-Michael}}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -34,52 +38,34 @@
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
 % \centerline{323 Evans Hall, Berkeley, CA 94720 }
-\centerline{ (908)-472-6870 $\mid$ ebenmichael@berkeley.edu $\mid$ \href{http://github.com/ebenmichael}{github.com/ebenmichael} $\mid$ \href{ebenmichael.github.io}{ebenmichael.github.io}}
+\centerline{ (908)-472-6870 $\mid$ ebenmichael@berkeley.edu $\mid$ 357 Evans Hall, Berkeley CA  $\mid$ \href{ebenmichael.github.io}{ebenmichael.github.io}}
 
                                   
 \begin{resume}
 
-\section{EDUCATION}
-    \textbf{University of California, Berkeley}, Berkeley, CA \hfill Expected 2020\\
-    PhD in Statistics, Advisor: Avi Feller
-    % \textbf{Research Interests}: Causal Inference, Machine Learning
+  \section{EDUCATION}
+  \textbf{University of California, Berkeley}, Berkeley, CA \hfill Expected 2021\\
+  PhD in Statistics, Advisors: Avi Feller and Peng Ding\\
+  \textbf{Research Interests}: Causal Inference, Machine Learning, Program Evaluation, Optimization
 
-    \textbf{Columbia University}, Columbia College, New York, NY \hfill May 2016\\
-    Bachelor of Arts, \textit{Summa Cum Laude}, Computer Science and Statistics\\
-    \textbf{Honors}: Phi Beta Kappa, Computer Science Department Award% (top Computer Science Major)
-    , Dean's List (Fall 2012-Spring 2016)
-
-
+  \textbf{Columbia University}, Columbia College, New York, NY \hfill May 2016\\
+  Bachelor of Arts, \textit{Summa Cum Laude}, Computer Science and Statistics\\
+  \textbf{Honors}: Phi Beta Kappa, Computer Science Department Award% (top Computer Science Major)
+  , Dean's List (Fall 2012-Spring 2016)
 
  \makeatletter 
  \renewcommand\BR@b@bibitem[2][]{\BR@bibitem[#1]{#2}\BR@c@bibitem{#2}}           
  \makeatother
-\bibliographystyle{apalike}
+\bibliographystyle{chicago}
 \nobibliography{my_papers}
-\section{RESEARCH}
-\textbf{Research Interests}:
-\begin{itemize}
-\item[] Causal Inference, Machine Learning, Program Evaluation%Econometrics% , Optimization
-\end{itemize}%
-\vspace{-4mm}
-\textbf{Working Papers:}
-\begin{itemize}
-\item[] \bibentry{benmichael2018_ascm}
-\end{itemize}
-\vspace{-4mm}
-\textbf{Contributed Talks:}
-\begin{itemize}
-\item[] UAI 2018 Causal Workshop, 2018 European Winter Meeting of the Econometric Society,
-\\Society for Research on Educational Effectiveness 2019
-% \item[] \bibentry{benmichael2018_uai}
-% \item[] \bibentry{benmichael2018_eswm}
-\end{itemize}
-\vspace{-4mm}
-\textbf{Open Source Software:}
-\begin{itemize}
-\item[] \href{https://github.com/ebenmichael/augsynth}{\texttt{augsynth}}: \texttt{R} implementation of the augmented synthetic control method
-\end{itemize}
-\section{EXPERIENCE}
+% \textbf{Research Interests}:
+% \section{rese}
+% \begin{itemize}
+% \item[] Causal Inference, Machine Learning, Program Evaluation%Econometrics% , Optimization
+% \end{itemize}%
+
+
+\section{WORK EXPERIENCE}
 \textbf{Uber}, New York, NY \hfill{Summer 2019}\\
 \textit{Data Science Intern}
 \begin{itemize}
@@ -88,21 +74,6 @@
 \item Created procedures to quickly isolate predictive contribution of features in black box  models
 % \item Evaluated model improvements and disseminated results across the organization  
 \end{itemize}
-\textbf{U.C. Berkeley Department of Statistics}, Berkeley, CA  \hfill{Fall 2017, Fall 2018}\\
-\textit{Graduate Student Instructor}
-\begin{itemize}
-  % \item Lectured recitations and created assignments and assessments for Stat 159/259: Reproducible and Collaborative Data Science; the course focused on reproducible analysis using the Python data science stack and tools such as version control and Makefiles
-% \item Lectured recitations and created assignments and assessments for
-% \vspace{-1mm}  
-%   \begin{itemize}
-%   \item[] Stat 159/259: Reproducible and Collaborative Data Science     
-%   \item[] Stat 232: Experimental Design
-%   \end{itemize}
-% \end{itemize}
-% \item Lectured recitations and created assignments and assessments for Stat 159/259: Reproducible and Collaborative Data Science and Stat 232: Experimental Design
-\item (Fall 2018) Stat 232: Experimental Design
-\item (Fall 2017) \href{https://berkeley-stat159-f17.github.io/stat159-f17/}{Stat 159/259: Reproducible and Collaborative Data Science}
-\end{itemize}  
 \vspace{-2mm}  
 \textbf{Walmart Labs}, Sunnyvale, CA \hfill{Summer 2017}\\
 \textit{Machine Learning Scientist Intern}
@@ -125,67 +96,66 @@
 % \item Presented and documented models, code, and results
 \end{itemize}
 
-\begin{comment}
-%BIG DATA
-\textbf{Big Data Summer Institute}, University of Michigan, Ann Arbor, MI \hfill Summer 2015
-\\ \textit{Intern}
-\begin{itemize}
-\item Implemented a search and counting algorithm for sub-sequences of the human genome
-\item Attended lectures on machine learning, algorithms, data science, and statistics 
-\item Presented work to faculty and undergraduates to promote the program to other institutions
-\end{itemize}
-\end{comment}
-
-% ECON
-\begin{comment}
-\textbf{Columbia University Department of Economics}, New York, NY \hfill Fall 2014 - Spring 2016\\
-\textit{Research Assistant}
-\begin{itemize}
-\item Built a natural language processing text analysis application in Python for use by economists 
-% \item Extracted text features from corpora using Python, NLTK, and gensim
-\item Performed econometric and statistical analysis on text data with associated metadata
-\end{itemize}
-\end{comment}
-
-\begin{comment}
-%DIMACS
-	\textbf{Center for Discrete Mathematics and Theoretical Computer Science}, Piscataway, NJ\\
-\textit{Research Intern} \hfill Summer 2014 
-\begin{itemize}
-\item Implemented a spectral machine learning algorithm in Python to learn a Hidden Markov Model
-\item Improved algorithm runtime 100x through utilization of Python's NumPy and SciPy libraries
-\item Presented results to colleagues and faculty to gain feedback
-\end{itemize}
-
-%TA
-\textbf{Columbia University Departments of Mathematics and Statistics}, New York, NY
-  \\ \textit{Undergraduate Teaching Assistant}\hfill Spring 2014 - Spring 2016
-\begin{itemize}
-\item Held regular office hours for calculus, linear algebra, and statistics students
-\item Evaluated assignments and provided feedback to students
-\end{itemize}
-\end{comment}
 
 
-% \section{EXTRACURRICULAR ACTIVITIES}
-% 	\textbf{Columbia Data Science Society}, Vice President of Education \hfill Fall 2015 - Spring 2016
-% 	\begin{itemize}
-% 	\item Designed and taught workshops on data science tools such as Python and R
-% 	\item Ran a committee of six people which organized educational events in data science
-% 	\end{itemize}
-% \begin{comment}	
-% 	\textbf{Personal Projects} (On Github)
-% 	\begin{itemize}
-% 	\item Qlearning: Implementation of deep reinforcement learning algorithms
-% 	\item brownian: Simulation of Brownian motion and general stochastic differential equations
-% 	\item memm\_tagging: Implementation of a Maximum Entropy Markov Model 
-% 	\end{itemize}
-% \end{comment}
+% \section{RESEARCH}
+
+% \textbf{Interests}: Causal Inference, Machine Learning, Program Evaluation, Optimization
+
+% \vskip -8pt
+\section{PUBLISHED ARTICLES}
+% \medskip
+
+% \vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{Elser2019}
+
+\vskip -8pt
+% \hspace{0.2em} \bibentry{Elser2019}
+% \vspace{-4mm}
+\section{PREPRINTS AND WORKING PAPERS}
+
+% \vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2020_lor}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2020_trial_emulation}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{keele2020_hospital}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2019_multisynth}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2018_ascm}
+
+\section{OPEN SOURCE STATISTICAL SOFTWARE}
+% \vskip -8pt
+\hspace{0.2em}\hangpara{3em}{1} \href{https://github.com/ebenmichael/augsynth}{\texttt{augsynth}}: \texttt{R} implementation of the augmented synthetic control method
+
+\section{TEACHING}
+\textbf{U.C. Berkeley Department of Statistics}
+\textit{Graduate Student Instructor}\\
+% \begin{itemize}
+%     \item[] Stat 232: Experimental Design with Sam Pimentel \hfill Fall 2017
+%     \item[] Stat 159/259: Reproducible and Collaborative Data Science with Fernando Perez \hfill Fall 2018
+% \end{itemize}
+\hspace{0.2em}\hangpara{3em}{1} Stat 232: Experimental Design with Sam Pimentel \hfill Fall 2018\\
+\hspace{0.2em}\hangpara{3em}{1} Stat 159/259: Reproducible and Collaborative Data Science with Fernando Perez \hfill Fall 2017
 
 \section{INSTITUTIONAL SERVICE}
-Co-president of the Statistics Graduate Student Association\hfill Fall 2018 - Spring 2019
+
+\medskip
+
+\hspace{0.2em}\hangpara{2em}{1} 
+PhD admissions committee, Department of Statistics, UC Berkeley\hfill Spring 2020
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} 
+Co-president of the Berkeley Statistics Graduate Student Association\hfill Fall 2018 - Spring 2019
+
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Reviewer for {\it Econometrica}, {\it Journal of the American Statistical Association}, {\it Journal of Educational and Behavioral Statistics}, {\it Journal of Causal Inference}, and {\it Journal of Applied Econometrics}
+
+
 \section{SKILLS}
-R, Python, Machine Learning, Experimental Design, Program Evaluation  % SQL, Scala, Spark, MATLAB, Java
+R, Python, Machine Learning, Experimental Design, Program Evaluation  % SQL, Scala, Spark, 
+
 
 
 \end{resume}

@@ -38,13 +38,14 @@
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
 % \centerline{323 Evans Hall, Berkeley, CA 94720 }
-\centerline{ (908)-472-6870 $\mid$ ebenmichael@berkeley.edu $\mid$ 357 Evans Hall, Berkeley CA  $\mid$ \href{ebenmichael.github.io}{ebenmichael.github.io}}
+\centerline{ (908)-472-6870 $\mid$ ebenmichael@fas.harvard.edu $\mid$ 1737 Cambridge St, Cambridge MA  $\mid$ \href{ebenmichael.github.io}{ebenmichael.github.io}}
 
                                   
 \begin{resume}
 
 \section{EDUCATION}
-    \textbf{University of California, Berkeley}, Berkeley, CA \hfill Expected 2021\\
+\medskip
+    \textbf{University of California, Berkeley}, Berkeley, CA \hfill December 2020\\
     PhD in Statistics, Advisors: Avi Feller and Peng Ding
     % \textbf{Research Interests}: Causal Inference, Machine Learning
 
@@ -52,7 +53,14 @@
     Bachelor of Arts, \textit{Summa Cum Laude}, Computer Science and Statistics\\
     % \textbf{Honors}: Phi Beta Kappa, Computer Science Department Award% (top Computer Science Major)
     % , Dean's List (Fall 2012-Spring 2016)
- \makeatletter 
+
+\section{ACADEMIC APPOINTMENTS}
+\medskip
+\textbf{Harvard University}, Cambridge, MA \hfill January 2021 - Present\\
+\textit{Postdoctoral Fellow}, Institute for Quantitative Social Science
+
+
+    \makeatletter 
  \renewcommand\BR@b@bibitem[2][]{\BR@bibitem[#1]{#2}\BR@c@bibitem{#2}}           
  \makeatother
 \bibliographystyle{chicago}
@@ -64,11 +72,19 @@
 % \end{itemize}%
 \section{PUBLISHED ARTICLES}
 \medskip
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2020_trial_emulation}
+\vskip -8pt
 \hspace{0.2em}\hangpara{1.7em}{1} \bibentry{Elser2019}
 % \hspace{0.2em} \bibentry{Elser2019}
 
 \section{PREPRINTS AND WORKING PAPERS}
 \medskip
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2021_drp}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2020_lor}
+\vskip -8pt
+\hspace{0.2em}\hangpara{1.7em}{1} \bibentry{keele2020_hospital}
+\vskip -8pt
 \hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2019_multisynth}
 \vskip -8pt
 \hspace{0.2em}\hangpara{1.7em}{1} \bibentry{benmichael2018_ascm}
@@ -77,19 +93,30 @@
 \hspace{0.2em}\hangpara{3em}{1} \href{https://github.com/ebenmichael/augsynth}{\texttt{augsynth}}: \texttt{R} implementation of the augmented synthetic control method
 \section{PRESENTATIONS}
 \medskip
-\hspace{0.2em}\hangpara{2em}{1} Synthetic control and weighted event study models with staggered adoption \hfill November 2019\\
-\emph{Berkeley-Stanford Econometrics Jamboree}
+\hspace{0.2em}\hangpara{2em}{1} Double regression with post-stratification for high dimensional survey data\\
+\emph{Asian Political Methodology Meetings} \hfill January 2021\\
+\emph{BigSurv20} \hfill November 2020
 \vskip -8pt
-\hspace{0.2em}\hangpara{2em}{1} Augmented Panel Data Models with Staggered Adoption \hfill May 2019\\
-\emph{Atlantic Causal Inference Conference}\\
-\hspace{2em}{\footnotesize Thomas R. Ten Have Poster Award runner up}
+\hspace{0.2em}\hangpara{2em}{1} A trial emulation approach for policy evaluations with group-level longitudinal data\\
+\emph{Association for Public Policy Analysis \& Management Fall Research Conference} \hfill November 2020
 \vskip -8pt
-\hspace{0.2em}\hangpara{2em}{1} Multi-level balancing weights for multi-site observational studies \hfill March 2019\\
-\emph{Society for Research on Educational Effectiveness}
+\hspace{0.2em}\hangpara{2em}{1} Varying impacts of letters of recommendation on college admissions\\
+\emph{Annual Meeting of the Society for Political Methodology} \hfill July 2020
 \vskip -8pt
-\hspace{0.2em}\hangpara{2em}{1} The augmented synthetic control method \hfill December 2018\\ \emph{2018 European Winter Meeting of the Econometric Society}
+\hspace{0.2em}\hangpara{2em}{1} Synthetic control and weighted event study models with staggered adoption\\
+\emph{Online Causal Inference Seminar} \hfill September 2020\\
+\emph{Econometric Society World Congress} \hfill August 2020\\
+\emph{Joint Statistical Meetings} {\footnotesize (SFASA Student Travel Award winner)} \hfill August 2020 \\
+\emph{Berkeley-Stanford Econometrics Jamboree} \hfill November 2019\\
+% \hspace{0.2em}\hangpara{2em}{1} Augmented Panel Data Models with Staggered Adoption \hfill May 2019\\
+\emph{Atlantic Causal Inference Conference} {\footnotesize (Thomas R. Ten Have Poster Award runner up)} \hfill May 2019
 \vskip -8pt
-\hspace{0.2em}\hangpara{2em}{1} Matrix constraints and multi-task learning for covariate balance \hfill August 2018\\ \emph{7th Causal Inference Workshop at UAI}
+\hspace{0.2em}\hangpara{2em}{1} Multi-level balancing weights for multi-site observational studies\\
+\emph{Society for Research on Educational Effectiveness} \hfill March 2019
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} The augmented synthetic control method\\ \emph{2018 European Winter Meeting of the Econometric Society} \hfill December 2018
+\vskip -8pt
+\hspace{0.2em}\hangpara{2em}{1} Matrix constraints and multi-task learning for covariate balance \\ \emph{7th Causal Inference Workshop at UAI} \hfill August 2018
 
 \section{AWARDS AND HONORS}
 \hspace{0.2em}\hangpara{2em}{1} Department fellowship, Department of Statistics, U.C. Berkeley \hfill 2018\\
@@ -123,80 +150,84 @@ PhD admissions committee, Department of Statistics, UC Berkeley\hfill Spring 202
 Co-president of the Berkeley Statistics Graduate Student Association\hfill Fall 2018 - Spring 2019
 
 \vskip -8pt
-\hspace{0.2em}\hangpara{2em}{1} Reviewer for {\it Journal of Causal Inference}, and {\it Journal of Applied Econometrics}
+\hspace{0.2em}\hangpara{2em}{1} Reviewer for {\it Econometrica}, {\it Journal of the American Statistical Association}, {\it Political Analysis}, {\it Annals of Applied Statistics}, {\it Journal of Educational and Behavioral Statistics}, {\it Journal of Causal Inference}, and {\it Journal of Applied Econometrics}
 
 
 \section{WORK EXPERIENCE}
+\medskip
 \textbf{Uber}, New York, NY \hfill{Summer 2019}\\
 \textit{Data Science Intern}
-\begin{itemize}
-\item Built spatiotemporal models for feature extraction to enhance predictions in dispatch decisions
-\item Utilized factor analysis and auto-encoding neural networks to learn embeddings of ride behavior
-\item Created procedures to quickly isolate predictive contribution of features in black box  models
-% \item Evaluated model improvements and disseminated results across the organization  
-\end{itemize}
+% \begin{itemize}
+% \item Built spatiotemporal models for feature extraction to enhance predictions in dispatch decisions
+% \item Utilized factor analysis and auto-encoding neural networks to learn embeddings of ride behavior
+% \item Created procedures to quickly isolate predictive contribution of features in black box  models
+% % \item Evaluated model improvements and disseminated results across the organization  
+% \end{itemize}
 \vspace{-2mm}  
+
+% \medskip
 \textbf{Walmart Labs}, Sunnyvale, CA \hfill{Summer 2017}\\
 \textit{Machine Learning Scientist Intern}
-\begin{itemize}
-\item Designed models of consumer purchase behavior to learn latent representations of products
-\item Implemented efficient learning algorithms on tens of millions of consumer purchases with Spark
-% \item Assessed resulting representations' ability to reconstruct a human-generated catalog
-\item Validated the representations' predictive power by reconstructing a human-generated catalog
-  % \item Communicated results to various teams across the organization
-% \item Presented results to various teams across the organization for use in their modelling pipelines 
-\end{itemize}
+% \begin{itemize}
+% \item Designed models of consumer purchase behavior to learn latent representations of products
+% \item Implemented efficient learning algorithms on tens of millions of consumer purchases with Spark
+% % \item Assessed resulting representations' ability to reconstruct a human-generated catalog
+% \item Validated the representations' predictive power by reconstructing a human-generated catalog
+%   % \item Communicated results to various teams across the organization
+% % \item Presented results to various teams across the organization for use in their modelling pipelines 
+% \end{itemize}
 
-
+\vspace{-2mm}  
 \textbf{Knewton}, New York, NY \hfill{Summer 2016}\\
 \textit{Data Science Intern}
-\begin{itemize}
-\item Generalized Bayesian models of student learning to incorporate hierarchical structure 
-\item Scaled learning algorithms with a 10x speedup using Spark
-\item Analyzed performance, strengths, and weaknesses of models on student data
-% \item Presented and documented models, code, and results
-\end{itemize}
+% \begin{itemize}
+% \item Generalized Bayesian models of student learning to incorporate hierarchical structure 
+% \item Scaled learning algorithms with a 10x speedup using Spark
+% \item Analyzed performance, strengths, and weaknesses of models on student data
+% % \item Presented and documented models, code, and results
+% \end{itemize}
 
-\begin{comment}
-%BIG DATA
-\textbf{Big Data Summer Institute}, University of Michigan, Ann Arbor, MI \hfill Summer 2015
-\\ \textit{Intern}
-\begin{itemize}
-\item Implemented a search and counting algorithm for sub-sequences of the human genome
-\item Attended lectures on machine learning, algorithms, data science, and statistics 
-\item Presented work to faculty and undergraduates to promote the program to other institutions
-\end{itemize}
-\end{comment}
+% \begin{comment}
+% %BIG DATA
+% \textbf{Big Data Summer Institute}, University of Michigan, Ann Arbor, MI \hfill Summer 2015
+% \\ \textit{Intern}
+% \begin{itemize}
+% \item Implemented a search and counting algorithm for sub-sequences of the human genome
+% \item Attended lectures on machine learning, algorithms, data science, and statistics 
+% \item Presented work to faculty and undergraduates to promote the program to other institutions
+% \end{itemize}
+% \end{comment}
 
 % ECON
 % \begin{comment}
+  \vspace{-2mm}  
 \textbf{Columbia University Department of Economics}, New York, NY \hfill Fall 2014 - Spring 2016\\
 \textit{Research Assistant}
-\begin{itemize}
-\item Built a natural language processing text analysis application in Python for use by economists 
-% \item Extracted text features from corpora using Python, NLTK, and gensim
-\item Performed econometric and statistical analysis on text data with associated metadata
-\end{itemize}
+% \begin{itemize}
+% \item Built a natural language processing text analysis application in Python for use by economists 
+% % \item Extracted text features from corpora using Python, NLTK, and gensim
+% \item Performed econometric and statistical analysis on text data with associated metadata
+% \end{itemize}
 % \end{comment}
 
-\begin{comment}
-%DIMACS
-	\textbf{Center for Discrete Mathematics and Theoretical Computer Science}, Piscataway, NJ\\
-\textit{Research Intern} \hfill Summer 2014 
-\begin{itemize}
-\item Implemented a spectral machine learning algorithm in Python to learn a Hidden Markov Model
-\item Improved algorithm runtime 100x through utilization of Python's NumPy and SciPy libraries
-\item Presented results to colleagues and faculty to gain feedback
-\end{itemize}
+% \begin{comment}
+% %DIMACS
+% 	\textbf{Center for Discrete Mathematics and Theoretical Computer Science}, Piscataway, NJ\\
+% \textit{Research Intern} \hfill Summer 2014 
+% \begin{itemize}
+% \item Implemented a spectral machine learning algorithm in Python to learn a Hidden Markov Model
+% \item Improved algorithm runtime 100x through utilization of Python's NumPy and SciPy libraries
+% \item Presented results to colleagues and faculty to gain feedback
+% \end{itemize}
 
-%TA
-\textbf{Columbia University Departments of Mathematics and Statistics}, New York, NY
-  \\ \textit{Undergraduate Teaching Assistant}\hfill Spring 2014 - Spring 2016
-\begin{itemize}
-\item Held regular office hours for calculus, linear algebra, and statistics students
-\item Evaluated assignments and provided feedback to students
-\end{itemize}
-\end{comment}
+% %TA
+% \textbf{Columbia University Departments of Mathematics and Statistics}, New York, NY
+%   \\ \textit{Undergraduate Teaching Assistant}\hfill Spring 2014 - Spring 2016
+% \begin{itemize}
+% \item Held regular office hours for calculus, linear algebra, and statistics students
+% \item Evaluated assignments and provided feedback to students
+% \end{itemize}
+% \end{comment}
 
 
 % \section{EXTRACURRICULAR ACTIVITIES}
